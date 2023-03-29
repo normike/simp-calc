@@ -11,12 +11,15 @@ function checkOperator(){
     } else {
         console.log('please insert a valid input of operation!');
     }
-    resetOperationSelection();
+    resetOperatorSelection();
 }
 
 checkOperator();
 
-
+function resetOperatorSelection() {
+    operator = prompt('select an operator, a. addition, b. subtraction, c. division, d. multiplication: ');
+    checkOperator();
+}
 
 //4. create a function that will perform our calculation based on the operator selected by the user
 function performOperatorSelection() {
@@ -34,26 +37,27 @@ if (operator === 'a') {
     return addition;
 } else if (operator === 'b') {
     let subtraction = firstInput - secondInput
-    console.log(`the sum is ${addition}`);
+    console.log(`the difference is ${addition}`);
     return subtraction;
 } else if (division === 'c') {
     let division = firstInput / secondInput
-    console.log(`the sum is ${division}`);
+    console.log(`the quotient is ${division}`);
     return division;
 } else if (operator === 'd') {
     let multiplication = firstInput * secondInput
-    console.log(`the sum is ${multiplication}`);
+    console.log(`the product is ${multiplication}`);
     return multiplication;
 } else {
     console.log('please insert a valid number or input!')
 }
 performOperation();
+
 //  a. ask user for first number or input
 //  b. ask user second number or input
 //  c. perform the operation selected on the first and second numbers inputed
 // create a function to reset the input of operator selection and restart the process when there is a wrong selection of operator
 function resetOperatorSelection() {
-    let operator = prompt('select an operator, a. addition, b. subtraction, c. division, d. multiplication: ');
+    operator = prompt('select an operator, a. addition, b. subtraction, c. division, d. multiplication: ');
     checkOperator();
 }
 }
