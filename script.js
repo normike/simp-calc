@@ -2,7 +2,7 @@
 const prompt = require('prompt-sync')();
 
 //2. create a prompt for user to select the type of operation to perform 
-let operator = prompt('select an operator, a. addition, b. subtraction, c. division, d. multiplication: ');
+let operator = prompt('select an operator, a. addition, b. subtraction, c. division, d. multiplication: ').toLowerCase();
 
 //3. create a function that checks the user selection of operator if the operator selected is correct proceed else ask the user to input a correct selector and start over
 function checkOperator(){
