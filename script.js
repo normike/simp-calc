@@ -48,7 +48,7 @@ if (operator === 'a') {
     console.log(`the product is ${multiplication}`);
     return multiplication;
 } else {
-    console.log('please insert a valid number or input!')
+    console.log('please input a valid number or input!');
 }
 performOperation();
 
